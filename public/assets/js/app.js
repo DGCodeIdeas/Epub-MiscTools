@@ -60,7 +60,40 @@ $(document).ready(function() {
     }
 
     // EPUB Upload
-    $('#epub-dropzone').click(() => $('#epub-input').click());
+    $('#epub-dropzone').click(function(e) {
+        if (e.target !== $('#epub-input')[0]) {
+            $('#epub-input').click();
+        }
+    });
+
+    $('#epub-input').click(function(e) {
+        e.stopPropagation();
+    });
+
+    // Drag and Drop for EPUB
+    $('#epub-dropzone').on('dragover', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).addClass('border-pink-500 bg-gray-700');
+    });
+
+    $('#epub-dropzone').on('dragleave', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).removeClass('border-pink-500 bg-gray-700');
+    });
+
+    $('#epub-dropzone').on('drop', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).removeClass('border-pink-500 bg-gray-700');
+        const files = e.originalEvent.dataTransfer.files;
+        if (files.length) {
+            $('#epub-input')[0].files = files;
+            $('#epub-input').trigger('change');
+        }
+    });
+
     $('#epub-input').change(async function(e) {
         const file = e.target.files[0];
         if (!file) return;
@@ -81,7 +114,40 @@ $(document).ready(function() {
     });
 
     // Font Upload
-    $('#font-dropzone').click(() => $('#font-input').click());
+    $('#font-dropzone').click(function(e) {
+        if (e.target !== $('#font-input')[0]) {
+            $('#font-input').click();
+        }
+    });
+
+    $('#font-input').click(function(e) {
+        e.stopPropagation();
+    });
+
+    // Drag and Drop for Font
+    $('#font-dropzone').on('dragover', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).addClass('border-pink-500 bg-gray-700');
+    });
+
+    $('#font-dropzone').on('dragleave', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).removeClass('border-pink-500 bg-gray-700');
+    });
+
+    $('#font-dropzone').on('drop', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).removeClass('border-pink-500 bg-gray-700');
+        const files = e.originalEvent.dataTransfer.files;
+        if (files.length) {
+            $('#font-input')[0].files = files;
+            $('#font-input').trigger('change');
+        }
+    });
+
     $('#font-input').change(async function(e) {
         const file = e.target.files[0];
         if (!file) return;
