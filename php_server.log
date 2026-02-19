@@ -1,0 +1,13 @@
+[Thu Feb 19 01:28:38 2026] PHP 8.3.6 Development Server (http://0.0.0.0:8080) started
+[Thu Feb 19 01:28:41 2026] 127.0.0.1:59586 Accepted
+[Thu Feb 19 01:28:41 2026] 127.0.0.1:59586 [200]: GET /
+[Thu Feb 19 01:28:41 2026] 127.0.0.1:59586 Closing
+[Thu Feb 19 01:28:41 2026] 127.0.0.1:59600 Accepted
+[Thu Feb 19 01:28:41 2026] 127.0.0.1:59600 [200]: GET /assets/js/app.js
+[Thu Feb 19 01:28:41 2026] 127.0.0.1:59600 Closing
+[Thu Feb 19 01:28:42 2026] 127.0.0.1:59606 Accepted
+[Thu Feb 19 01:28:42 2026] 127.0.0.1:59606 [200]: GET /tool/font-changer
+[Thu Feb 19 01:28:42 2026] 127.0.0.1:59606 Closing
+[Thu Feb 19 01:28:42 2026] 127.0.0.1:59614 Accepted
+[Thu Feb 19 01:28:42 2026] 127.0.0.1:59614 [200]: GET /assets/js/app.js
+[Thu Feb 19 01:28:42 2026] 127.0.0.1:59614 Closing

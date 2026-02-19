@@ -1,0 +1,15 @@
+[dependencies]
+php = "php/php@latest"
+
+[fs]
+map = [
+  { from = "public", to = "/" },
+  { from = "storage", to = "/storage" },
+  { from = "app", to = "/app" },
+  { from = "vendor", to = "/vendor" }
+]
+
+[[command]]
+name = "serve"
+runner = "php"
+args = ["-S", "0.0.0.0:8080", "-t", "public"]
