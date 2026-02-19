@@ -1,0 +1,11 @@
+vendor/
+storage/app/chunks/*
+storage/app/uploads/*
+storage/logs/*
+storage/tmp/*
+.env
+*.epub
+*.ttf
+test_epub_manager.php
+node_modules/
+dist/
